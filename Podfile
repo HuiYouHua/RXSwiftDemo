@@ -3,7 +3,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 targetsArray = ['RXSwiftDemo',
-'01ReactiveProgram'
+'01ReactiveProgram',
+'02Observable'
 ]
 
 targetsArray.each do |t|

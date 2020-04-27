@@ -1,0 +1,6 @@
+framework module Pods_04Subjects_Variables {
+  umbrella header "Pods-04Subjects\Variables-umbrella.h"
+
+  export *
+  module * { export * }
+}

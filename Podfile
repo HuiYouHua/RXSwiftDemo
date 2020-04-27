@@ -4,7 +4,9 @@ platform :ios, '9.0'
 
 targetsArray = ['RXSwiftDemo',
 '01ReactiveProgram',
-'02Observable'
+'02Observable',
+'03Observer',
+'04Subjects\Variables'
 ]
 
 targetsArray.each do |t|

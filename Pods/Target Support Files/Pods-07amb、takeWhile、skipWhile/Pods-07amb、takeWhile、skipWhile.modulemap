@@ -1,0 +1,6 @@
+framework module Pods_07amb_takeWhile_skipWhile {
+  umbrella header "Pods-07amb、takeWhile、skipWhile-umbrella.h"
+
+  export *
+  module * { export * }
+}

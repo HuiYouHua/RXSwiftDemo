@@ -1,0 +1,6 @@
+framework module Pods_21UIActivityIndicatorView_UIApplication {
+  umbrella header "Pods-21UIActivityIndicatorView、UIApplication-umbrella.h"
+
+  export *
+  module * { export * }
+}

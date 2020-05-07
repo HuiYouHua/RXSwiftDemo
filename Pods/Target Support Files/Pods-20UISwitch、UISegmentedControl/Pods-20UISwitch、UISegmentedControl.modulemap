@@ -1,0 +1,6 @@
+framework module Pods_20UISwitch_UISegmentedControl {
+  umbrella header "Pods-20UISwitch、UISegmentedControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

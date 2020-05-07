@@ -1,0 +1,6 @@
+framework module Pods_18UITextField_UITextView {
+  umbrella header "Pods-18UITextField、UITextView-umbrella.h"
+
+  export *
+  module * { export * }
+}

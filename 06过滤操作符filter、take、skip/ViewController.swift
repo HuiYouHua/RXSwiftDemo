@@ -189,11 +189,3 @@ extension ViewController {
             .disposed(by: disposeBag)
     }
 }
-
-// MARK: -
-extension ViewController {
-    //
-    func () {
-    
-    }
-}

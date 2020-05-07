@@ -1,0 +1,6 @@
+framework module Pods_19UIButton_UIBarButtonItem {
+  umbrella header "Pods-19UIButton、UIBarButtonItem-umbrella.h"
+
+  export *
+  module * { export * }
+}

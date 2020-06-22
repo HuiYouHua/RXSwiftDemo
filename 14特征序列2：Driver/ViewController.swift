@@ -15,9 +15,55 @@ class ViewController: UIViewController {
 
     let disposeBag = DisposeBag()
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        let result = textField.rx.text.skip(1).flatMap { [weak self](input) -> Observable<Any> in
+//             return (self?.dealwithData(inputText: input ?? ""))!
+//        }.share(replay: 1, scope: .whileConnected)
+//        .observeOn(MainScheduler.instance)
+//        .catchErrorJustReturn("检测到了错误事件")
+        
+        let result = textField.rx.text.orEmpty
+        .asDriver()
+        .flatMap {
+                return self.dealwithData(inputText: $0)
+                .asDriver(onErrorJustReturn: "检测到了错误事件")
+        }
+        
+
+        result.drive(onNext: { (event) in
+            print("-------")
+            print(event)
+            print(Thread.current)
+        }).disposed(by: disposeBag)
+        
+        result.drive(onNext: { (event) in
+            print(event)
+            print(Thread.current)
+        }).disposed(by: disposeBag)
+    }
+    
+    // 模拟查询数据
+    func dealwithData(inputText:String)-> Observable<Any>{
+        print("请求网络了 \(Thread.current)") // data
+        return Observable<Any>.create({ (ob) -> Disposable in
+            if inputText == "1234" {
+                ob.onError(NSError.init(domain: "com.lgcooci.cn", code: 10086, userInfo: nil))
+            }
+
+            DispatchQueue.global().async {
+                print("发送之前看看: \(Thread.current)")
+                ob.onNext("已经输入:\(inputText)")
+                ob.onCompleted()
+            }
+            return Disposables.create()
+        })
     }
 }
 

@@ -17,13 +17,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let switch1 = UISwitch()
+        let button1 = UIButton()
+        switch1.rx.isOn.subscribe(onNext: {print("当前开关状态：\($0)")})
+        .disposed(by: disposeBag)
+        
+        switch1.rx.isOn
+        .bind(to: button1.rx.isEnabled)
+        .disposed(by: disposeBag)
     }
+    
 }
 
 // MARK: -
-extension ViewController {
-    //
-    func () {
-        
-    }
-}
+//extension ViewController {
+//    //
+//    func () {
+//        
+//    }
+//}

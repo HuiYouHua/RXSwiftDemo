@@ -14,16 +14,38 @@ class ViewController: UIViewController {
 
     let disposeBag = DisposeBag()
 
+    var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView = UITableView(frame: view.frame, style: .plain)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.addSubview(tableView)
+        
+        let items = Observable.just([
+        "文本输入框的用法",
+        "开关按钮的用法",
+        "进度条的用法",
+        "文本标签的用法"
+        ])
+     
+        let bind = items.bind(to: tableView.rx.items)
+        bind
+
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self](indexPath) in
+                switch indexPath.item {
+                case 0:
+                    self?.navigationController?.pushViewController(RxDataSourceTableViewController(), animated: true)
+                default:
+                    break
+                }
+            })
+        .disposed(by: disposeBag)
+        
+    
     }
 }
 
-// MARK: -
-extension ViewController {
-    //
-    func () {
-        
-    }
-}
+

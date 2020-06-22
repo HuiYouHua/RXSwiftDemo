@@ -193,6 +193,12 @@
 		BE56287F2464233500065CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE56287D2464233500065CEA /* Main.storyboard */; };
 		BE5628812464233600065CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5628802464233600065CEA /* Assets.xcassets */; };
 		BE5628842464233600065CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5628822464233600065CEA /* LaunchScreen.storyboard */; };
+		BE75D72E246AAA7100263232 /* RxDataSourceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75D72C246AA99C00263232 /* RxDataSourceTableViewController.swift */; };
+		BEC1D02F246924D0000CE684 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1D02E246924D0000CE684 /* Operators.swift */; };
+		BEC1D030246924D0000CE684 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1D02E246924D0000CE684 /* Operators.swift */; };
+		BEC1D0322469258F000CE684 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1D02E246924D0000CE684 /* Operators.swift */; };
+		BEC1D0332469258F000CE684 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1D02E246924D0000CE684 /* Operators.swift */; };
+		BEC1D03424692590000CE684 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC1D02E246924D0000CE684 /* Operators.swift */; };
 		CE30A22018860AAC371B41A0 /* Pods_08startWith_merge_zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D622A2A161EA20E1F2072CB /* Pods_08startWith_merge_zip.framework */; };
 		D4C563DA6ED506EB331820F4 /* Pods_03Observer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0F5172C9C001C5D2EECC4F /* Pods_03Observer.framework */; };
 		DC86F58E6299930F078DDB4A /* Pods_12Error_Handling_Operators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278D2C740D6FC81C44A4B932 /* Pods_12Error_Handling_Operators.framework */; };
@@ -482,6 +488,8 @@
 		BE5628802464233600065CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE5628832464233600065CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE5628852464233600065CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE75D72C246AA99C00263232 /* RxDataSourceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDataSourceTableViewController.swift; sourceTree = "<group>"; };
+		BEC1D02E246924D0000CE684 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		C1DBC2A37C359761B4F9B4A9 /* Pods-19UIButton、UIBarButtonItem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19UIButton、UIBarButtonItem.debug.xcconfig"; path = "Target Support Files/Pods-19UIButton、UIBarButtonItem/Pods-19UIButton、UIBarButtonItem.debug.xcconfig"; sourceTree = "<group>"; };
 		C26062029FFC0CA27D91EE7A /* Pods-03Observer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-03Observer.debug.xcconfig"; path = "Target Support Files/Pods-03Observer/Pods-03Observer.debug.xcconfig"; sourceTree = "<group>"; };
 		C63A00DEFF32462FFA692960 /* Pods-03Observer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-03Observer.release.xcconfig"; path = "Target Support Files/Pods-03Observer/Pods-03Observer.release.xcconfig"; sourceTree = "<group>"; };
@@ -1184,6 +1192,7 @@
 		BE56282E246422FF00065CEA /* 23双向绑定：<-> */ = {
 			isa = PBXGroup;
 			children = (
+				BEC1D02E246924D0000CE684 /* Operators.swift */,
 				BE56282F246422FF00065CEA /* AppDelegate.swift */,
 				BE562831246422FF00065CEA /* SceneDelegate.swift */,
 				BE562833246422FF00065CEA /* ViewController.swift */,
@@ -1229,6 +1238,7 @@
 				BE5628772464233500065CEA /* AppDelegate.swift */,
 				BE5628792464233500065CEA /* SceneDelegate.swift */,
 				BE56287B2464233500065CEA /* ViewController.swift */,
+				BE75D72C246AA99C00263232 /* RxDataSourceTableViewController.swift */,
 				BE56287D2464233500065CEA /* Main.storyboard */,
 				BE5628802464233600065CEA /* Assets.xcassets */,
 				BE5628822464233600065CEA /* LaunchScreen.storyboard */,
@@ -3301,6 +3311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				358B3C0D24546C8700E583C3 /* ViewController.swift in Sources */,
+				BEC1D02F246924D0000CE684 /* Operators.swift in Sources */,
 				358B3C0924546C8700E583C3 /* AppDelegate.swift in Sources */,
 				358B3C0B24546C8700E583C3 /* SceneDelegate.swift in Sources */,
 			);
@@ -3491,6 +3502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE562834246422FF00065CEA /* ViewController.swift in Sources */,
+				BEC1D030246924D0000CE684 /* Operators.swift in Sources */,
 				BE562830246422FF00065CEA /* AppDelegate.swift in Sources */,
 				BE562832246422FF00065CEA /* SceneDelegate.swift in Sources */,
 			);
@@ -3501,6 +3513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE56284C2464230B00065CEA /* ViewController.swift in Sources */,
+				BEC1D03424692590000CE684 /* Operators.swift in Sources */,
 				BE5628482464230B00065CEA /* AppDelegate.swift in Sources */,
 				BE56284A2464230B00065CEA /* SceneDelegate.swift in Sources */,
 			);
@@ -3511,6 +3524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5628642464231E00065CEA /* ViewController.swift in Sources */,
+				BEC1D0332469258F000CE684 /* Operators.swift in Sources */,
 				BE5628602464231E00065CEA /* AppDelegate.swift in Sources */,
 				BE5628622464231E00065CEA /* SceneDelegate.swift in Sources */,
 			);
@@ -3521,7 +3535,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE56287C2464233500065CEA /* ViewController.swift in Sources */,
+				BEC1D0322469258F000CE684 /* Operators.swift in Sources */,
 				BE5628782464233500065CEA /* AppDelegate.swift in Sources */,
+				BE75D72E246AAA7100263232 /* RxDataSourceTableViewController.swift in Sources */,
 				BE56287A2464233500065CEA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

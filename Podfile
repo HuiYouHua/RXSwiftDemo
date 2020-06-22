@@ -39,5 +39,6 @@ targetsArray.each do |t|
     # Pods for RXSwiftDemo
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
   end
 end

@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         ])
      
         let bind = items.bind(to: tableView.rx.items)
-        bind
 
         tableView.rx.itemSelected
             .subscribe(onNext: { [weak self](indexPath) in

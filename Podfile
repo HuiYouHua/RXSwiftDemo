@@ -28,7 +28,8 @@ targetsArray = ['RXSwiftDemo',
 '23Bind',
 '24UIGestureRecognizer',
 '25UIDatePicker',
-'26UITableView'
+'26UITableView',
+'37UICollectionView1'
 ]
 
 targetsArray.each do |t|

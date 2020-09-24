@@ -61,6 +61,14 @@ class ViewController: UIViewController {
         .subscribe(onNext: { _ in
             print("开始编辑内容!")
         }).disposed(by: disposeBag)
+        
+        inputField.rx.text.debounce(RxTimeInterval.milliseconds(300), scheduler: MainScheduler.instance).filter { (text) -> Bool in
+             text?.count ?? 0 > 3
+        }.asObservable().subscribe { (event) in
+            if let text = event.element as? String, let id = Int(text) {
+                print(id)
+            }
+        }.disposed(by: disposeBag)
        
     }
 }

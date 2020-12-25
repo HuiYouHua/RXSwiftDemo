@@ -14,9 +14,63 @@ class ViewController: UIViewController {
 
     let disposeBag = DisposeBag()
     
+    let canInvite1: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    let canInvite2: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    let canInvite3: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        toArray()
+        
 
+        
+//        let a = Observable.of(canInvite1, canInvite2, canInvite3)
+//        a.toArray()
+//            .subscribe { (singleEvent) in
+//                switch singleEvent {
+//                case .success(let canInvites):
+//                    if canInvites.first(where: { $0.value == true }) != nil {
+//                        print("true")
+//                    } else {
+//                        print("false")
+//                    }
+//                case .error(_):
+//                    print("error")
+//                }
+//            }.disposed(by: disposeBag)
+//
+//        Observable.from([canInvite1, canInvite2, canInvite3])//.filter({ $0.value == false })
+//            .subscribe { [weak self](event) in
+//
+//                guard let self = self else { return }
+//                for invited in [self.canInvite1, self.canInvite2, self.canInvite3] {
+//                    if invited.value == false {
+//                        print("false")
+//                        break
+//                    }
+//                    print("true")
+//                }
+//            }.disposed(by: disposeBag)
+        
+//        canInvite1.accept(true)
+        for invited in [self.canInvite1, self.canInvite2, self.canInvite3] {
+            invited.subscribe { (e) in
+                var value = "true"
+                for invited in [self.canInvite1, self.canInvite2, self.canInvite3] {
+                    if invited.value == false {
+                        value = "false"
+                        break
+                    }
+                }
+                print(value)
+            }
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        canInvite1.accept(true)
+        canInvite2.accept(true)
+        canInvite3.accept(true)
     }
 }
 
@@ -24,10 +78,20 @@ class ViewController: UIViewController {
 extension ViewController {
     // 该操作符先把一个序列转成一个数组，并作为一个单一的事件发送，然后结束
     func toArray() {
+//        Observable.of(1, 2, 3)
+//        .toArray()
+//            .subscribe({ print($0) })
+//        .disposed(by: disposeBag)
         Observable.of(1, 2, 3)
         .toArray()
-        .subscribe(onNext: { print($0) })
-        .disposed(by: disposeBag)
+            .subscribe { (e) in
+                switch e {
+                case .success(let array):
+                    print(array)
+                case .error(_):
+                    print("error")
+                }
+            }.disposed(by: disposeBag)
     }
 }
 

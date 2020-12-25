@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 
 class ViewController: UIViewController {
 
@@ -29,12 +30,18 @@ class ViewController: UIViewController {
         }
         .disposed(by: disposeBag)
         
-        //显示消息提示框
-        func showAlert(title: String, message: String) {
-            let alert = UIAlertController(title: title, message: message,
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "确定", style: .cancel))
-            self.present(alert, animated: true)
-        }
+        
+        view.rx.tapGesture().when(.recognized).subscribe(onNext: { [weak self] _ in
+            print("123")
+        }).disposed(by: disposeBag)
     }
+        
+    //显示消息提示框
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "确定", style: .cancel))
+        self.present(alert, animated: true)
+    }
+    
 }

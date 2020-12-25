@@ -2,7 +2,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '9.0'
 
-targetsArray = ['RXSwiftDemo',
+targetsArray = [
+'Test',
+'RXSwiftDemo',
 '01ReactiveProgram',
 '02Observable',
 '03Observer',
@@ -29,7 +31,8 @@ targetsArray = ['RXSwiftDemo',
 '24UIGestureRecognizer',
 '25UIDatePicker',
 '26UITableView',
-'37UICollectionView1'
+'37UICollectionView1',
+'50DelegateProxy'
 ]
 
 targetsArray.each do |t|
@@ -41,5 +44,6 @@ targetsArray.each do |t|
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxDataSources'
+  pod "RxGesture"
   end
 end

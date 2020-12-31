@@ -1,5 +1,20 @@
 PODS:
+  - Alamofire (4.9.1)
   - Differentiator (4.0.1)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.5.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - ObjectMapper (4.2.0)
+  - Result (4.1.0)
+  - RxAlamofire (5.1.0):
+    - RxAlamofire/Core (= 5.1.0)
+  - RxAlamofire/Core (5.1.0):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 5.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -15,6 +30,12 @@ PODS:
   - RxSwift (5.1.1)
 
 DEPENDENCIES:
+  - MBProgressHUD
+  - MJRefresh
+  - Moya
+  - ObjectMapper
+  - Result
+  - RxAlamofire
   - RxCocoa
   - RxDataSources
   - RxGesture
@@ -22,7 +43,14 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - Differentiator
+    - MBProgressHUD
+    - MJRefresh
+    - Moya
+    - ObjectMapper
+    - Result
+    - RxAlamofire
     - RxCocoa
     - RxDataSources
     - RxGesture
@@ -30,13 +58,20 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 27bfb5e7adf065d069bfd3ca17b898494bae1f1e
+PODFILE CHECKSUM: b4cb6682467053e7491f9ebd5949c33251397862
 
 COCOAPODS: 1.9.3

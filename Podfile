@@ -56,5 +56,14 @@ targetsArray.each do |t|
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod "RxGesture"
+  pod "ObjectMapper"
+  pod "RxAlamofire"
+  pod "Moya"
+  pod "Result"
+  pod "Result"
+  pod "MBProgressHUD"
+#  pod "SwiftNotice"
+  pod "MJRefresh"
+  
   end
 end

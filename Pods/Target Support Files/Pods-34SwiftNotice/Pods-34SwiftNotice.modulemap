@@ -1,0 +1,6 @@
+framework module Pods_34SwiftNotice {
+  umbrella header "Pods-34SwiftNotice-umbrella.h"
+
+  export *
+  module * { export * }
+}

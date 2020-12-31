@@ -27,10 +27,12 @@ class ViewController: UIViewController {
         
         //初始化数据
         let items = Observable.just([
-            "文本输入框的用法",
-            "开关按钮的用法",
-            "进度条的用法",
-            "文本标签的用法",
+            "UITableView的使用2：RxDataSources",
+            "UITableView的使用3：刷新表格数据",
+            "UITableView的使用4：表格数据的搜索过滤",
+            "UITableView的使用5：可编辑表格",
+            "UITableView的使用6：不同类型的单元格混用",
+            "UITableView的使用7：样式修改"
         ])
         
         //设置单元格数据（其实就是对 cellForRowAt 的封装）
@@ -47,25 +49,25 @@ class ViewController: UIViewController {
         //获取选中项的索引
         tableView.rx.itemSelected.subscribe(onNext: { indexPath in
             print("选中项的indexPath为：\(indexPath)")
+            if indexPath.row == 0 {
+                self.navigationController?.pushViewController(ViewController2(), animated: true)
+            } else if indexPath.row == 1 {
+                self.navigationController?.pushViewController(ViewController3(), animated: true)
+            } else if indexPath.row == 2 {
+                self.navigationController?.pushViewController(ViewController4(), animated: true)
+            } else if indexPath.row == 3 {
+                self.navigationController?.pushViewController(ViewController5(), animated: true)
+            } else if indexPath.row == 4 {
+                self.navigationController?.pushViewController(ViewController6(), animated: true)
+            } else if indexPath.row == 5 {
+                self.navigationController?.pushViewController(ViewController7(), animated: true)
+            }
         }).disposed(by: disposeBag)
         
         //获取选中项的内容
         tableView.rx.modelSelected(String.self).subscribe(onNext: { item in
             print("选中项的标题为：\(item)")
         }).disposed(by: disposeBag)
-        
-        //        //获取选中项的索引
-        //        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
-        //            self?.showMessage("选中项的indexPath为：\(indexPath)")
-        //        }).disposed(by: disposeBag)
-        //
-        //        //获取选中项的内容
-        //        tableView.rx.modelSelected(String.self).subscribe(onNext: {[weak self] item in
-        //            self?.showMessage("选中项的标题为：\(item)")
-        //        }).disposed(by: disposeBag)
-        
-        
-        
         
         //获取被取消选中项的索引
         tableView.rx.itemDeselected.subscribe(onNext: { [weak self] indexPath in

@@ -1,0 +1,6 @@
+framework module Pods_35MVVM {
+  umbrella header "Pods-35MVVM-umbrella.h"
+
+  export *
+  module * { export * }
+}

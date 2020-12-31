@@ -1,0 +1,6 @@
+framework module Pods_28UIPickerView {
+  umbrella header "Pods-28UIPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}

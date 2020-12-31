@@ -1,0 +1,6 @@
+framework module Pods_40KVO {
+  umbrella header "Pods-40KVO-umbrella.h"
+
+  export *
+  module * { export * }
+}

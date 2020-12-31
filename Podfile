@@ -3,7 +3,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 targetsArray = [
-'Test',
 'RXSwiftDemo',
 '01ReactiveProgram',
 '02Observable',
@@ -31,8 +30,20 @@ targetsArray = [
 '24UIGestureRecognizer',
 '25UIDatePicker',
 '26UITableView',
-'37UICollectionView1',
-'50DelegateProxy'
+'27UICollectionView1',
+'28UIPickerView',
+'29unownedweak',
+'30URLSession',
+'31RxAlamofire',
+'32Moya',
+'33MBProgressHUD',
+'34SwiftNotice',
+'35MVVM',
+'36MJRefresh',
+'37DelegateProxy',
+'38sendMessagemethodInvoked',
+'39NotificationCenter',
+'40KVO'
 ]
 
 targetsArray.each do |t|

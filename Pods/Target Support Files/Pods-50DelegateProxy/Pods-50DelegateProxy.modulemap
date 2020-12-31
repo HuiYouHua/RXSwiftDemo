@@ -1,6 +1,0 @@
-framework module Pods_50DelegateProxy {
-  umbrella header "Pods-50DelegateProxy-umbrella.h"
-
-  export *
-  module * { export * }
-}

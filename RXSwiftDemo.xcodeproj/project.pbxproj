@@ -1308,8 +1308,8 @@
 				BE56282E246422FF00065CEA /* 23双向绑定：<-> */,
 				BE5628462464230B00065CEA /* 24UI控件扩展7：UIGestureRecognizer */,
 				BE56285E2464231E00065CEA /* 25UI控件扩展8：UIDatePicker */,
-				BE5628762464233500065CEA /* 26UITableView的使用1：基本用法 */,
-				BE83DA4724A0436300FFE800 /* 27UICollectionView的使用1：基本用法 */,
+				BE5628762464233500065CEA /* 26UITableView的使用 */,
+				BE83DA4724A0436300FFE800 /* 27UICollectionView的使用 */,
 				BE9E4872259DC08400FCA20D /* 28UIPickerView的使用 */,
 				BE9E48C8259DC09E00FCA20D /* 29[unowned self] 与 [weak self] */,
 				BE9E4900259DC0B200FCA20D /* 30URLSession的使用 */,
@@ -1686,7 +1686,7 @@
 			path = "25UI控件扩展8：UIDatePicker";
 			sourceTree = "<group>";
 		};
-		BE5628762464233500065CEA /* 26UITableView的使用1：基本用法 */ = {
+		BE5628762464233500065CEA /* 26UITableView的使用 */ = {
 			isa = PBXGroup;
 			children = (
 				BE5628772464233500065CEA /* AppDelegate.swift */,
@@ -1703,10 +1703,10 @@
 				BE5628822464233600065CEA /* LaunchScreen.storyboard */,
 				BE5628852464233600065CEA /* Info.plist */,
 			);
-			path = "26UITableView的使用1：基本用法";
+			path = "26UITableView的使用";
 			sourceTree = "<group>";
 		};
-		BE83DA4724A0436300FFE800 /* 27UICollectionView的使用1：基本用法 */ = {
+		BE83DA4724A0436300FFE800 /* 27UICollectionView的使用 */ = {
 			isa = PBXGroup;
 			children = (
 				BE83DA4824A0436300FFE800 /* AppDelegate.swift */,
@@ -1721,7 +1721,7 @@
 				BE83DA5324A0436400FFE800 /* LaunchScreen.storyboard */,
 				BE83DA5624A0436400FFE800 /* Info.plist */,
 			);
-			path = "27UICollectionView的使用1：基本用法";
+			path = "27UICollectionView的使用";
 			sourceTree = "<group>";
 		};
 		BE9CAB722599790E00B6510D /* UITableView的使用2：RxDataSources */ = {
@@ -7240,7 +7240,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "26UITableView的使用1：基本用法/Info.plist";
+				INFOPLIST_FILE = "26UITableView的使用/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7259,7 +7259,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "26UITableView的使用1：基本用法/Info.plist";
+				INFOPLIST_FILE = "26UITableView的使用/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7278,7 +7278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/27UICollectionView的使用1：基本用法/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/27UICollectionView的使用/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7297,7 +7297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/27UICollectionView的使用1：基本用法/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/27UICollectionView的使用/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

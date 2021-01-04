@@ -204,6 +204,14 @@
 		BE56287F2464233500065CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE56287D2464233500065CEA /* Main.storyboard */; };
 		BE5628812464233600065CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5628802464233600065CEA /* Assets.xcassets */; };
 		BE5628842464233600065CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5628822464233600065CEA /* LaunchScreen.storyboard */; };
+		BE813ED425A3216C00CE9003 /* DouBanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE813E8025A3211700CE9003 /* DouBanAPI.swift */; };
+		BE813F0625A323AA00CE9003 /* Observable+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE813F0325A323AA00CE9003 /* Observable+Response.swift */; };
+		BE813F0725A323AA00CE9003 /* MoyaProvider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE813F0425A323AA00CE9003 /* MoyaProvider+Rx.swift */; };
+		BE813F0825A323AA00CE9003 /* Single+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE813F0525A323AA00CE9003 /* Single+Response.swift */; };
+		BE813F3725A325F100CE9003 /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE813F3625A325F100CE9003 /* Response+ObjectMapper.swift */; };
+		BE813F6325A325FE00CE9003 /* Single+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE813F6125A325FE00CE9003 /* Single+ObjectMapper.swift */; };
+		BE813F6425A325FE00CE9003 /* ObservableType+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE813F6225A325FE00CE9003 /* ObservableType+ObjectMapper.swift */; };
+		BE813FB825A3265B00CE9003 /* DouBanNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE813FB725A3265B00CE9003 /* DouBanNetworkService.swift */; };
 		BE83DA4924A0436300FFE800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83DA4824A0436300FFE800 /* AppDelegate.swift */; };
 		BE83DA4B24A0436300FFE800 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83DA4A24A0436300FFE800 /* SceneDelegate.swift */; };
 		BE83DA4D24A0436300FFE800 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83DA4C24A0436300FFE800 /* ViewController.swift */; };
@@ -636,6 +644,14 @@
 		BE5628802464233600065CEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE5628832464233600065CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE5628852464233600065CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE813E8025A3211700CE9003 /* DouBanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanAPI.swift; sourceTree = "<group>"; };
+		BE813F0325A323AA00CE9003 /* Observable+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Response.swift"; sourceTree = "<group>"; };
+		BE813F0425A323AA00CE9003 /* MoyaProvider+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Rx.swift"; sourceTree = "<group>"; };
+		BE813F0525A323AA00CE9003 /* Single+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+Response.swift"; sourceTree = "<group>"; };
+		BE813F3625A325F100CE9003 /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
+		BE813F6125A325FE00CE9003 /* Single+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+ObjectMapper.swift"; sourceTree = "<group>"; };
+		BE813F6225A325FE00CE9003 /* ObservableType+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+ObjectMapper.swift"; sourceTree = "<group>"; };
+		BE813FB725A3265B00CE9003 /* DouBanNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanNetworkService.swift; sourceTree = "<group>"; };
 		BE83DA4624A0436300FFE800 /* 27UICollectionView1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 27UICollectionView1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE83DA4824A0436300FFE800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE83DA4A24A0436300FFE800 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1706,6 +1722,26 @@
 			path = "26UITableView的使用";
 			sourceTree = "<group>";
 		};
+		BE813F0225A323AA00CE9003 /* RxMoya */ = {
+			isa = PBXGroup;
+			children = (
+				BE813F0325A323AA00CE9003 /* Observable+Response.swift */,
+				BE813F0425A323AA00CE9003 /* MoyaProvider+Rx.swift */,
+				BE813F0525A323AA00CE9003 /* Single+Response.swift */,
+			);
+			path = RxMoya;
+			sourceTree = "<group>";
+		};
+		BE813F3525A325E400CE9003 /* RxMapper */ = {
+			isa = PBXGroup;
+			children = (
+				BE813F3625A325F100CE9003 /* Response+ObjectMapper.swift */,
+				BE813F6225A325FE00CE9003 /* ObservableType+ObjectMapper.swift */,
+				BE813F6125A325FE00CE9003 /* Single+ObjectMapper.swift */,
+			);
+			path = RxMapper;
+			sourceTree = "<group>";
+		};
 		BE83DA4724A0436300FFE800 /* 27UICollectionView的使用 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1856,9 +1892,13 @@
 		BE9E4973259DC0D600FCA20D /* 32结合Moya使用 */ = {
 			isa = PBXGroup;
 			children = (
+				BE813F3525A325E400CE9003 /* RxMapper */,
+				BE813F0225A323AA00CE9003 /* RxMoya */,
 				BE9E4974259DC0D600FCA20D /* AppDelegate.swift */,
 				BE9E4976259DC0D600FCA20D /* SceneDelegate.swift */,
 				BE9E4978259DC0D600FCA20D /* ViewController.swift */,
+				BE813E8025A3211700CE9003 /* DouBanAPI.swift */,
+				BE813FB725A3265B00CE9003 /* DouBanNetworkService.swift */,
 				BE9E497A259DC0D600FCA20D /* Main.storyboard */,
 				BE9E497D259DC0D800FCA20D /* Assets.xcassets */,
 				BE9E497F259DC0D800FCA20D /* LaunchScreen.storyboard */,
@@ -5362,8 +5402,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE813F0625A323AA00CE9003 /* Observable+Response.swift in Sources */,
 				BE9E4979259DC0D600FCA20D /* ViewController.swift in Sources */,
+				BE813F6425A325FE00CE9003 /* ObservableType+ObjectMapper.swift in Sources */,
+				BE813ED425A3216C00CE9003 /* DouBanAPI.swift in Sources */,
+				BE813F0825A323AA00CE9003 /* Single+Response.swift in Sources */,
+				BE813F6325A325FE00CE9003 /* Single+ObjectMapper.swift in Sources */,
+				BE813F3725A325F100CE9003 /* Response+ObjectMapper.swift in Sources */,
 				BE9E4975259DC0D600FCA20D /* AppDelegate.swift in Sources */,
+				BE813FB825A3265B00CE9003 /* DouBanNetworkService.swift in Sources */,
+				BE813F0725A323AA00CE9003 /* MoyaProvider+Rx.swift in Sources */,
 				BE9E4977259DC0D600FCA20D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

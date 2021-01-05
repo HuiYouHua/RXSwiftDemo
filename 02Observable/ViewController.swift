@@ -14,8 +14,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        just()
+//        of()
+//        from()
+//        empty()
+//        never()
+//        error()
+        range()
+//        repeatElement()
+//        generate()
+//        create()
+//        deferred()
+//        interval()
+//        timer()
 //        subscribe()
-        doOn()
+//        doOn()
     }
     
 }
@@ -24,25 +37,41 @@ class ViewController: UIViewController {
 /**
  Observable<T> 这个类就是Rx 框架的基础，我们可以称它为可观察序列。它的作用就是可以异步地产生一系列的 Event（事件），即一个 Observable<T> 对象会随着时间推移不定期地发出 event(element : T) 这样一个东西。
  而且这些 Event 还可以携带数据，它的泛型 <T> 就是用来指定这个Event携带的数据的类型。
- 有了
+ 有了可观察序列，我们还需要有一个 Observer（订阅者）来订阅它，这样这个订阅者才能收到 Observable<T> 不时发出的 Event。
  */
 extension ViewController {
     func just() {
         /// 该方法通过传入一个默认值来初始化
         /// 显式地标注出了 observable 的类型为 Observable<Int>，即指定了这个 Observable所发出的事件携带的数据类型必须是 Int 类型的
         let observable = Observable<Int>.just(5)
+        
+        /**
+         5
+         */
     }
     
     func of() {
         /// 该方法可以接受可变数量的参数（必需要是同类型的）
         /// 没有显式地声明出 Observable 的泛型类型，Swift 也会自动推断类型
         let observable = Observable.of("A", "B", "C")
+        
+        /**
+         A
+         B
+         C
+         */
     }
 
     func from() {
         /// 该方法需要一个数组参数
         /// 数据里的元素就会被当做这个 Observable 所发出 event携带的数据内容，最终效果同上面的 of()样例是一样的
         let observable = Observable.from(["A", "B", "C"])
+        
+        /**
+         A
+         B
+         C
+         */
     }
 
     func empty() {
@@ -70,6 +99,14 @@ extension ViewController {
         /// 两种方法创建的 Observable 序列都是一样的
         let observable1 = Observable.range(start: 1, count: 5)
         let observable2 = Observable.of(1, 2, 3, 4, 5)
+        
+        /**
+         1
+         2
+         3
+         4
+         5
+         */
     }
     
     func repeatElement() {
@@ -141,7 +178,7 @@ extension ViewController {
     func interval() {
         /// 这个方法创建的 Observable 序列每隔一段设定的时间，会发出一个索引数的元素。而且它会一直发送下去
         /// 让其每 1 秒发送一次，并且是在主线程（MainScheduler）发送
-        let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+        let observable = Observable<Int>.interval(DispatchTimeInterval.seconds(5), scheduler: MainScheduler.instance)
         observable.subscribe { (event) in
             print(event)
         }
@@ -150,11 +187,10 @@ extension ViewController {
     func timer() {
         /// 这个方法有两种用法，一种是创建的 Observable序列在经过设定的一段时间后，产生唯一的一个元素
         /// 5秒种后发出唯一的一个元素0
-        let observable1 = Observable<Int>.timer(5, scheduler: MainScheduler.instance)
+        let observable1 = Observable<Int>.timer(DispatchTimeInterval.seconds(5), scheduler: MainScheduler.instance)
         observable1.subscribe { (event) in
             print(event)
         }
-        
         let observable2 = Observable<Int>.timer(5, period: 1, scheduler: MainScheduler.instance)
         observable2.subscribe { (event) in
             print(event)

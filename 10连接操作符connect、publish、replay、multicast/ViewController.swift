@@ -14,7 +14,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        normal()
+        
+//        normal()
+//        publish()
+//        replay()
+//        multicast()
+//        refCount()
+        share()
     }
 }
 
@@ -171,12 +177,13 @@ extension ViewController {
     func share() {
         //每隔1秒钟发送1个事件
         let interval = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
-            .share(replay: 5)
+            .share(replay: 3)
+        
          
         //第一个订阅者（立刻开始订阅）
         _ = interval
             .subscribe(onNext: { print("订阅1: \($0)") })
-         
+        
         //第二个订阅者（延迟5秒开始订阅）
         delay(5) {
             _ = interval

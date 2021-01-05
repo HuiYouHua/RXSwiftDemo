@@ -46,6 +46,14 @@ extension ViewController {
         subject.onNext("1")
         subject.onNext("2")
         subject.onNext("3")
+        /**
+         ["a", "b", "c"]
+         ["1", "2", "3"]
+         []
+         []
+         []
+         []
+         */
     }
 }
 
@@ -74,6 +82,19 @@ extension ViewController {
         subject.onNext("1")
         subject.onNext("2")
         subject.onNext("3")
+        /**
+         RxSwift.AddRef<Swift.String>
+         asObservable  a
+         asObservable  b
+         asObservable  c
+         RxSwift.AddRef<Swift.String>
+         asObservable  1
+         asObservable  2
+         asObservable  3
+         RxSwift.AddRef<Swift.String>
+         RxSwift.AddRef<Swift.String>
+         RxSwift.AddRef<Swift.String>
+         */
     }
 }
 
@@ -86,6 +107,11 @@ extension ViewController {
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)
     }
+    /**
+     10
+     20
+     30
+     */
     
     /**
      map 在做转换的时候容易出现“升维”的情况。即转变之后，从一个序列变成了一个序列的序列。
@@ -183,7 +209,7 @@ extension ViewController {
                     group.asObservable().subscribe({ (event) in
                         print("key：\(group.key)    event：\(event)")
                     })
-                    .disposed(by: disposeBag)
+                    .disposed(by: self.disposeBag)
                 default:
                     print("")
                 }

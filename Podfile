@@ -3,6 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 targetsArray = [
+'ShowMeCode',
 'RXSwiftDemo',
 '01ReactiveProgram',
 '02Observable',
@@ -59,7 +60,6 @@ targetsArray.each do |t|
   pod "ObjectMapper"
   pod "RxAlamofire"
   pod "Moya"
-  pod "Result"
   pod "Result"
   pod "MBProgressHUD"
 #  pod "SwiftNotice"

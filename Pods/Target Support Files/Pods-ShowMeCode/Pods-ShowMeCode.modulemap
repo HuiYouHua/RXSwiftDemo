@@ -1,0 +1,6 @@
+framework module Pods_ShowMeCode {
+  umbrella header "Pods-ShowMeCode-umbrella.h"
+
+  export *
+  module * { export * }
+}

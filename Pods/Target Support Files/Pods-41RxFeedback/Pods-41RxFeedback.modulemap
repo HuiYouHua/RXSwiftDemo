@@ -1,0 +1,6 @@
+framework module Pods_41RxFeedback {
+  umbrella header "Pods-41RxFeedback-umbrella.h"
+
+  export *
+  module * { export * }
+}

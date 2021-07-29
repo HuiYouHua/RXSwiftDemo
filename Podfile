@@ -44,7 +44,8 @@ targetsArray = [
 '37DelegateProxy',
 '38sendMessagemethodInvoked',
 '39NotificationCenter',
-'40KVO'
+'40KVO',
+'41RxFeedback'
 ]
 
 targetsArray.each do |t|
@@ -57,6 +58,8 @@ targetsArray.each do |t|
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod "RxGesture"
+  pod "RxFeedback"
+  pod "ReactorKit"
   pod "ObjectMapper"
   pod "RxAlamofire"
   pod "Moya"

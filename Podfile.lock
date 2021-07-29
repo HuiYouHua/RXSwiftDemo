@@ -9,6 +9,9 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - ObjectMapper (4.2.0)
+  - ReactorKit (2.1.1):
+    - RxSwift (~> 5.0)
+    - WeakMapTable (~> 1.1)
   - Result (4.1.0)
   - RxAlamofire (5.1.0):
     - RxAlamofire/Core (= 5.1.0)
@@ -22,22 +25,28 @@ PODS:
     - Differentiator (~> 4.0)
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
+  - RxFeedback (3.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxGesture (3.0.2):
     - RxCocoa (~> 5.1)
     - RxSwift (~> 5.1)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
   - MBProgressHUD
   - MJRefresh
   - Moya
   - ObjectMapper
+  - ReactorKit
   - Result
   - RxAlamofire
   - RxCocoa
   - RxDataSources
+  - RxFeedback
   - RxGesture
   - RxSwift
 
@@ -49,13 +58,16 @@ SPEC REPOS:
     - MJRefresh
     - Moya
     - ObjectMapper
+    - ReactorKit
     - Result
     - RxAlamofire
     - RxCocoa
     - RxDataSources
+    - RxFeedback
     - RxGesture
     - RxRelay
     - RxSwift
+    - WeakMapTable
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -64,14 +76,17 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  ReactorKit: 6d894a20c3d508344320901cd8e386fde92df4b6
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 16ad927a7771b0fde24ee4dabf0395b3899f076e
+PODFILE CHECKSUM: 78c5339446969484b59d9cef3a6b2a2c7771e28e
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

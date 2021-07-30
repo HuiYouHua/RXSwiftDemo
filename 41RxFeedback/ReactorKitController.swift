@@ -32,6 +32,44 @@ class ReactorKitController: UIViewController, StoryboardView {
         
         usernameOutlet.becomeFirstResponder()
         
+        /**
+         1，整体架构
+         （1）使用 ReactorKit 架构后代码根据职能分为 View（视图）和 Reactor（响应器）两部分：
+         View 是用户直接操作的层级，我们通过监测用户在 View 上的行为，转化成 Action 反馈给 Reactor。
+         Reactor 处理之后又把响应状态 State 传递给 View 层，View 这边显示最终的传递的状态。
+
+         （2）简单来说就是 View 层只发出行为，而 Reactor 只发出状态，相互把对方所需要的东西传递给对方，构成一条响应式的序列。
+         
+         2，Reactor 代码结构
+         （1）Reactor 是与 UI 相互独立的一层，它的作用就是将业务逻辑从 View 中抽离。也就是说每一个 View 都有对应的 Reactor ，并且将所有的逻辑代理都较给 Reactor（Reactor 接收到 View 层发出的 Action，然后通过内部操作，将 Action 转换为 State。）
+
+         （2）定义一个 Reactor 需要遵守 Reactor 协议，该协议定义了如下内容：
+         四个响应属性：Action、Mutation、State、initialState。
+         两个响应方法：mutate()、reduce()
+
+         （3）这些响应属性和响应方法的作用，以及相互关系如下：
+         Action：描述用户行为
+         Mutation：描述状态变更（ 它可以看作是 Action 到 State 的桥梁）
+         State：描述当前状态
+         initialState：描述初始化状态
+         mutate()：处理 Action 执行一些业务逻辑，并转换为 Mutation。
+         reduce()： 通过旧的 State 以及 Mutation 创建一个新的 State。
+         
+         3，View 代码结构
+         （1）View 为数据展示层，不管是 UIViewController 还是 UIView 都可以看作是 View。View 主要负责发出 Action，同时将 State 绑定到 UI 组件上。
+
+         （2）定义一个 View 只需要让它遵循 ReactorKit 的 View 或 StoryboardView 协议即可：
+         如果 ViewController 是纯代码开发的：则其遵守 View 协议。
+         如果 ViewController 是 Storyboard 开发的：则其遵守 StoryboardView 协议。
+
+         （3）View 中需要定义如下内容：
+         disposeBag 属性：协议属性。当 View 的 reactor 变化时，之前的 disposeBag 会自动 disposed。
+         bind(reactor:) 方法：实现用户输入绑定和状态输出绑定。
+
+         （4）协议中的 bind() 方法不需要我们手动去调用。遵循 View 协的类将自动获得一个 reactor 属性。当 View 的 reactor 属性被设置时，bind() 方法就会被自动调用。
+
+         原文出自：www.hangge.com  转载请保留原文链接：https://www.hangge.com/blog/cache/detail_2040.html
+         */
         self.reactor = ViewReactor()
         
     }

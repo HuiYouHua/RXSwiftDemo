@@ -45,7 +45,7 @@ extension ObservableType where Element == Any {
             // This is protection from accidental ignoring of scheduler so
             // reentracy errors can be avoided
             .observeOn(CurrentThreadScheduler.instance)
-
+            
             return events.scan(initialState, accumulator: reduce)
                 .do(
                     onNext: { output in
